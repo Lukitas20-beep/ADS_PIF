@@ -33,3 +33,39 @@ O campo de jogo é um tabuleiro 10x10, e, espalhadas por ele, estão várias min
 Marque as células que suspeita serem minas e continue explorando com cuidado. Se abrir uma célula com uma mina, o jogo termina, e a vitória escapa de suas mãos! Mas se conseguir limpar o campo, poderá dizer com orgulho: “i-C-mines, and I conquered!”
 
 Então, está preparado? Abra o olho, tome cada decisão com cuidado e tente ver as minas antes que elas vejam você. Boa sorte!
+
+## Implementação da mecânica do jogo
+A implementação da mecânica do jogo i-C-mines pode ser feita em C para combinar simplicidade e controle direto sobre os dados.
+
+1. Estrutura do Projeto
+   
+1.1 Arquivos principais:
+-main.c: Contém o loop principal e chama as funções do jogo.
+-game_logic.c e game_logic.h: Implementam e declaram funções para a lógica do jogo.
+-board.c e board.h: Implementam e declaram funções para criar e manipular o tabuleiro.
+1.2 Estruturas de Dados:
+-Uma matriz de tamanho fixo (10x10) para o tabuleiro.
+-Cada célula será representada por uma estrutura
+-O tabuleiro será uma matriz de Cell
+
+2. Etapas da Implementação
+2.1 Inicializar o Tabuleiro
+-Crie uma função para inicializar o tabuleiro:
+-Coloque minas aleatoriamente.
+-Calcule o número de minas ao redor para cada célula.
+
+2.2 Exibir o Tabuleiro
+-Crie uma função para exibir o tabuleiro
+-Mostre o estado atual (aberto, marcado, ou oculto)
+
+2.3 Abrir uma Célula
+-Crie uma função para abrir uma célula. Se a célula for "0", propague a abertura para as células adjacentes.
+
+2.4 Marcar uma Célula
+-Permita que o jogador marque células suspeitas.
+
+2.5 Loop Principal
+-Implemente o loop principal para:
+2.5.1 Exibir o tabuleiro.
+2.5.2 Aceitar entradas do jogador.
+2.5.3 Checar condições de vitória/derrota.
